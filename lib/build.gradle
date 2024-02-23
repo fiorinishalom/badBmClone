@@ -52,3 +52,21 @@ tasks.named('test') {
 // Make sure gradle (also) places resource files where IntelliJ wants them
 sourceSets.main.output.resourcesDir = sourceSets.main.output.classesDirs.asPath
 compileJava.dependsOn(processResources)
+
+jar {
+    // Set the desired JAR name using the archiveName property
+    archiveBaseName.set("badbm")
+
+    // Configure the manifest with the Main-Class attribute
+    manifest {
+        attributes "Main-Class": "edu.touro.mco152.bm.App"
+    }
+
+    // Set the duplicatesStrategy to EXCLUDE to handle duplicate files
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    // Include dependencies from the runtime classpath
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
