@@ -243,6 +243,7 @@ public class App {
             msg("worker is null abort...");
             return;
         }
+        //TODO
         worker.cancel(true);
     }
 
@@ -270,6 +271,7 @@ public class App {
 
         //4. set up disk worker thread and its event handlers
         worker = new DiskWorker();
+        //TODO
         worker.addPropertyChangeListener((final PropertyChangeEvent event) -> {
             switch (event.getPropertyName()) {
                 case "progress":
@@ -291,6 +293,7 @@ public class App {
         });
 
         //5. start the Swing worker thread
+        //TODO
         worker.execute();
     }
 
