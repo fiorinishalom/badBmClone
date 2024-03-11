@@ -4,7 +4,7 @@ import java.beans.PropertyChangeListener;
 
 public interface UIWorker<V>  {
     // Method to set the progress
-    void setProgress(int progress);
+    void updateProgress(int progress);
 
     // Method for publishing intermediate results
     void displayResults(V results);
