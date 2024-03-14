@@ -244,7 +244,7 @@ public class App {
             return;
         }
         //TODO
-        worker.cancel(true);
+        worker.uiWorker.makeCanceled(true);
     }
 
     /**
@@ -271,8 +271,9 @@ public class App {
 
         //4. set up disk worker thread and its event handlers
         worker = new DiskWorker();
+        worker.setUiWorker(new MySwingWorker());
         //TODO
-        worker.addPropertyChangeListener((final PropertyChangeEvent event) -> {
+        worker.uiWorker.addPropertyChangeListener((final PropertyChangeEvent event) -> {
             switch (event.getPropertyName()) {
                 case "progress":
                     int value = (Integer) event.getNewValue();
@@ -294,7 +295,8 @@ public class App {
 
         //5. start the Swing worker thread
         //TODO
-        worker.execute();
+        worker.uiWorker.start();
+
     }
 
     /**
