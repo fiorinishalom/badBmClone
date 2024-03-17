@@ -271,7 +271,7 @@ public class App {
 
         //4. set up disk worker thread and its event handlers
         worker = new DiskWorker();
-        worker.setUiWorker(new MySwingWorker());
+        worker.setUiWorker(new SwingUI());
         //TODO
         worker.uiWorker.addPropertyChangeListener((final PropertyChangeEvent event) -> {
             switch (event.getPropertyName()) {

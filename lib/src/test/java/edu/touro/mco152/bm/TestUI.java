@@ -2,7 +2,6 @@ package edu.touro.mco152.bm;
 
 import edu.touro.mco152.bm.ui.Gui;
 import edu.touro.mco152.bm.ui.MainFrame;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,38 +10,34 @@ import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MyWorkerTest {
-    MyWorker myWorker;
+class TestUI {
+    MyUI ui = new MyUI();
 
     @BeforeEach
     void setUp(){
         setupDefaultAsPerProperties();
+        DiskWorker diskWorker = new DiskWorker();
+        diskWorker.setUiWorker(ui);
 
-        DiskWorker worker;
-        worker = App.worker;
 
-        ;
+
 
     }
 
     @Test
     void start() {
-        assertFalse(App.worker.uiWorker().getLastStatus());
+
 
         try {
-            myWorker.start();
+            ui.start();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        assertTrue(myWorker.getLastStatus());
+        assertTrue(ui.getLastStatus());
 
         }
 
-    @Test
-    void doInBackground() {
-
-    }
 
     @Test
     void updateProgress() {

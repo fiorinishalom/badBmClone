@@ -3,7 +3,6 @@ package edu.touro.mco152.bm;
 import edu.touro.mco152.bm.ui.Gui;
 
 import javax.swing.*;
-import java.beans.PropertyChangeListener;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -20,7 +19,7 @@ import static edu.touro.mco152.bm.App.dataDir;
  * It encapsulates Swing components and their behavior, ensuring proper interaction between the
  * user interface and the backend benchmarking process.
  */
-public class MySwingWorker extends SwingWorker<Boolean, DiskMark>  implements UIWorker {
+public class SwingUI extends SwingWorker<Boolean, DiskMark>  implements UIWorker {
     // Record any success or failure status returned from SwingWorker (might be us or super)
     Boolean lastStatus = null;  // so far unknown
 

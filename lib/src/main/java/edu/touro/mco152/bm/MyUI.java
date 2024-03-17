@@ -1,16 +1,12 @@
 package edu.touro.mco152.bm;
 
-import edu.touro.mco152.bm.ui.Gui;
-import edu.touro.mco152.bm.ui.MainFrame;
-
 import java.beans.PropertyChangeListener;
-import java.io.File;
-import java.util.Properties;
 
 /**
+ *
  * concrete class to run benchMarker not using swing
  */
-public class MyWorker implements UIWorker {
+public class MyUI implements UIWorker {
 
     Boolean lastStatus = false;  // so far unknown
     int progressNum = 0;
@@ -27,7 +23,7 @@ public class MyWorker implements UIWorker {
     }
 
     public void doInBackground() throws Exception {
-        val = App.worker.startDiskWorker(); //Prof said this is alright, but it is a dependency
+
         lastStatus = true;
 
     }
@@ -38,6 +34,7 @@ public class MyWorker implements UIWorker {
      */
     @Override
     public void updateProgress(int progress) {
+        assert progress < 0 || progress > 100 : "Progress value must be between 0 and 100";
         if(0 > progress || progress > 100) {
             throw new IllegalArgumentException("Progress value must be between 0 and 100");
         }
