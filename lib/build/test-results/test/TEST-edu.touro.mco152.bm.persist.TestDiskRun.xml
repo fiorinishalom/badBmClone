@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.touro.mco152.bm.persist.TestDiskRun" tests="5" skipped="0" failures="1" errors="0" timestamp="2024-03-19T20:00:57" hostname="PEACE" time="1.337">
+  <properties/>
+  <testcase name="testDeleteAllWithEmptyDatabase()" classname="edu.touro.mco152.bm.persist.TestDiskRun" time="0.956"/>
+  <testcase name="findAll()" classname="edu.touro.mco152.bm.persist.TestDiskRun" time="0.069">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;4&gt; but was: &lt;5&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;4&gt; but was: &lt;5&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:527)
+	at app//edu.touro.mco152.bm.persist.TestDiskRun.findAll(TestDiskRun.java:48)
+	at java.base@17.0.2/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.2/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.2/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <testcase name="deleteAll()" classname="edu.touro.mco152.bm.persist.TestDiskRun" time="0.025"/>
+  <testcase name="testFindAllWithEmptyDatabase()" classname="edu.touro.mco152.bm.persist.TestDiskRun" time="0.005"/>
+  <testcase name="findAllInRun()" classname="edu.touro.mco152.bm.persist.TestDiskRun" time="0.279"/>
+  <system-out><![CDATA[[EL Fine]: server: 2024-03-19 16:00:58.004--Thread(Thread[Test worker,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
+[EL Config]: metadata: 2024-03-19 16:00:58.113--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class edu.touro.mco152.bm.persist.DiskRun] is set to [FIELD].
+[EL Config]: metadata: 2024-03-19 16:00:58.129--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class edu.touro.mco152.bm.persist.DiskRun] is being defaulted to: DiskRun.
+[EL Config]: metadata: 2024-03-19 16:00:58.129--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--The column name for element [ioMode] is being defaulted to: IOMODE.
+[EL Config]: metadata: 2024-03-19 16:00:58.145--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--The column name for element [numMarks] is being defaulted to: NUMMARKS.
+[EL Config]: metadata: 2024-03-19 16:00:58.145--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--The column name for element [runMin] is being defaulted to: RUNMIN.
+[EL Config]: metadata: 2024-03-19 16:00:58.145--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--The column name for element [runAvg] is being defaulted to: RUNAVG.
+[EL Config]: metadata: 2024-03-19 16:00:58.145--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--The column name for element [diskInfo] is being defaulted to: DISKINFO.
+[EL Config]: metadata: 2024-03-19 16:00:58.145--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--The column name for element [totalMarks] is being defaulted to: TOTALMARKS.
+[EL Config]: metadata: 2024-03-19 16:00:58.145--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--The column name for element [blockOrder] is being defaulted to: BLOCKORDER.
+[EL Config]: metadata: 2024-03-19 16:00:58.145--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--The column name for element [blockSize] is being defaulted to: BLOCKSIZE.
+[EL Config]: metadata: 2024-03-19 16:00:58.145--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--The column name for element [txSize] is being defaulted to: TXSIZE.
+[EL Config]: metadata: 2024-03-19 16:00:58.145--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--The column name for element [numBlocks] is being defaulted to: NUMBLOCKS.
+[EL Config]: metadata: 2024-03-19 16:00:58.145--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--The column name for element [runMax] is being defaulted to: RUNMAX.
+[EL Config]: metadata: 2024-03-19 16:00:58.145--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--The column name for element [startTime] is being defaulted to: STARTTIME.
+[EL Config]: metadata: 2024-03-19 16:00:58.145--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2024-03-19 16:00:58.145--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--The column name for element [endTime] is being defaulted to: ENDTIME.
+[EL Info]: 2024-03-19 16:00:58.238--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--EclipseLink, version: Eclipse Persistence Services - 3.0.2.v202107160933
+[EL Fine]: connection: 2024-03-19 16:00:58.566--Thread(Thread[Test worker,5,main])--Detected database platform: org.eclipse.persistence.platform.database.JavaDBPlatform
+[EL Fine]: connection: 2024-03-19 16:00:58.566--ServerSession(648630181)--Connection(789315095)--Thread(Thread[Test worker,5,main])--connecting(DatabaseLogin(
+	platform=>JavaDBPlatform
+	user name=> ""
+	datasource URL=> "jdbc:derby:derbyDB;create=true"
+))
+[EL Config]: connection: 2024-03-19 16:00:58.566--ServerSession(648630181)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--Connected: jdbc:derby:derbyDB
+	User: APP
+	Database: Apache Derby  Version: 10.15.2.0 - (1873585)
+	Driver: Apache Derby Embedded JDBC Driver  Version: 10.15.2.0 - (1873585)
+[EL Fine]: connection: 2024-03-19 16:00:58.613--ServerSession(648630181)--Thread(Thread[Test worker,5,main])--/file:/C:/Users/Shalom Fiorini/IdeaProjects/badBmClone/lib/build/classes/java/main/_jDiskMarkPU login successful
+[EL Fine]: sql: 2024-03-19 16:00:58.785--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--DELETE FROM DiskRun
+[EL Fine]: sql: 2024-03-19 16:00:58.816--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--DELETE FROM DiskRun
+[EL Fine]: sql: 2024-03-19 16:00:58.816--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--DELETE FROM DiskRun
+[EL Fine]: sql: 2024-03-19 16:00:58.835--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.816, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.86--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.866--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.866, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.867--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.869--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.869, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.871--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.873--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.872, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.874--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.876--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.875, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.877--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.881--ServerSession(648630181)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--SELECT ID, BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE FROM DiskRun
+[EL Fine]: sql: 2024-03-19 16:00:58.898--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--DELETE FROM DiskRun
+[EL Fine]: sql: 2024-03-19 16:00:58.901--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.9, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.903--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.904--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.904, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.906--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.908--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.907, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.909--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.911--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.91, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.913--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.915--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.914, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.916--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.917--ServerSession(648630181)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--SELECT ID, BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE FROM DiskRun
+[EL Fine]: sql: 2024-03-19 16:00:58.919--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--DELETE FROM DiskRun
+[EL Fine]: sql: 2024-03-19 16:00:58.922--ServerSession(648630181)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--SELECT ID, BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE FROM DiskRun
+[EL Fine]: sql: 2024-03-19 16:00:58.924--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--DELETE FROM DiskRun
+[EL Fine]: sql: 2024-03-19 16:00:58.926--ServerSession(648630181)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--SELECT ID, BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE FROM DiskRun
+[EL Fine]: sql: 2024-03-19 16:00:58.93--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--DELETE FROM DiskRun
+[EL Fine]: sql: 2024-03-19 16:00:58.932--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.932, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.934--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.935--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.934, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.936--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.938--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.937, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.939--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.942--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.941, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.944--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.946--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.945, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.947--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.948--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.948, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.95--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.952--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.951, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.953--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.955--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.954, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.957--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.96--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.959, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.961--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.963--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.963, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.965--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.967--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.966, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.968--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.969--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.969, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.97--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.971--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.971, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.973--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.974--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.974, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.974--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.974--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.974, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.974--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.974--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.974, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.974--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.974--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.974, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.974--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.974--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.974, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.974--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.974--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.974, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.974--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.989--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.989, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.989--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.989--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.989, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.989--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.989--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.989, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.989--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.989--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.989, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.989--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.989--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.989, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.989--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:58.989--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:58.989, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:58.989--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.007--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.006, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.008--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.009--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.009, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.01--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.012--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.011, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.013--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.014--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.014, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.016--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.017--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.017, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.018--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.02--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.019, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.02--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.02--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.02, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.02--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.02--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.02, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.02--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.02--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.02, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.02--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.036--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.036, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.036--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.036--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.036, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.036--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.036--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.036, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.036--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.036--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.036, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.036--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.036--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.036, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.036--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.036--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.036, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.036--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.036--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.036, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.051--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.051--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.051, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.051--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.051--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.051, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.051--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.051--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.051, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.051--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.051--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.051, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.051--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.051--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.051, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.051--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.067--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.067, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.067--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.067--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.067, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.067--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.067--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.067, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.067--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.067--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.067, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.067--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.067--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.067, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.067--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.067--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.067, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.067--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.067--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.067, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.067--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.067--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.067, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.067--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.082--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.067, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.082--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.082--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.082, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.082--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.082--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.082, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.082--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.082--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.082, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.082--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.082--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.082, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.082--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.082--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.082, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.082--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.082--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.082, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.098--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.098--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.098, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.098--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.098--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.098, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.098--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.098--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.098, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.098--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.098--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.098, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.098--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.098--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.098, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.098--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.098--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.098, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.114--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.115--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.114, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.116--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.117--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.117, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.118--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.12--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.119, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.121--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.122--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.122, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.123--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.125--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.124, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.126--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.128--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.127, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.129--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.13--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.13, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.131--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.133--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.133, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.135--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.135--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.135, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.135--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.135--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.135, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.135--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.135--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.135, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.135--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.135--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.135, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.135--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.135--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.135, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.135--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.15--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.15, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.15--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.15--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.15, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.15--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.15--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.15, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.15--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.15--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.15, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.15--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.15--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.15, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.15--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.15--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.15, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.15--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.15--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.15, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.166--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.166--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.166, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.166--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.166--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.166, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.166--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.166--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.166, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.166--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.166--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.166, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.166--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.166--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.166, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.181--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.182--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.182, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.182--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.182--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.182, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.182--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.182--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.182, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.182--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.182--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.182, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.182--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.182--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.182, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.182--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.182--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.182, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.197--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.197--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.197, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.197--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.197--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--INSERT INTO DiskRun (BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0, 512, os: Windows 11, null, 1, 32, 25, 0.0, 0.0, 0.0, 2024-03-19 16:00:59.197, 0, 409600]
+[EL Fine]: sql: 2024-03-19 16:00:59.197--ClientSession(1825228532)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--values IDENTITY_VAL_LOCAL()
+[EL Fine]: sql: 2024-03-19 16:00:59.197--ServerSession(648630181)--Connection(1709225221)--Thread(Thread[Test worker,5,main])--SELECT ID, BLOCKORDER, BLOCKSIZE, DISKINFO, ENDTIME, IOMODE, NUMBLOCKS, NUMMARKS, RUNAVG, RUNMAX, RUNMIN, STARTTIME, TOTALMARKS, TXSIZE FROM DiskRun
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
