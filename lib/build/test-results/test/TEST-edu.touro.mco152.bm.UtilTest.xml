@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.touro.mco152.bm.UtilTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-03-19T20:00:57" hostname="PEACE" time="0.047">
+<testsuite name="edu.touro.mco152.bm.UtilTest" tests="4" skipped="0" failures="1" errors="0" timestamp="2024-03-22T19:27:55" hostname="PEACE" time="0.056">
   <properties/>
   <testcase name="getErrorFromRandInt()" classname="edu.touro.mco152.bm.UtilTest" time="0.003"/>
-  <testcase name="boundaryRandInt()" classname="edu.touro.mco152.bm.UtilTest" time="0.002"/>
-  <testcase name="[1] 1" classname="edu.touro.mco152.bm.UtilTest" time="0.013"/>
-  <testcase name="[2] 2147483647" classname="edu.touro.mco152.bm.UtilTest" time="0.0"/>
+  <testcase name="boundaryRandInt()" classname="edu.touro.mco152.bm.UtilTest" time="0.01">
+    <failure message="org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.IllegalArgumentException: bound must be positive" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.IllegalArgumentException: bound must be positive
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at app//org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at app//org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at app//org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at app//org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3164)
+	at app//edu.touro.mco152.bm.UtilTest.boundaryRandInt(UtilTest.java:37)
+	at java.base@17.0.2/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.2/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.2/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.IllegalArgumentException: bound must be positive
+	at java.base/java.util.Random.nextInt(Random.java:322)
+	at edu.touro.mco152.bm.Util.randInt(Util.java:67)
+	at edu.touro.mco152.bm.UtilTest.lambda$boundaryRandInt$0(UtilTest.java:38)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+</failure>
+  </testcase>
+  <testcase name="[1] 2" classname="edu.touro.mco152.bm.UtilTest" time="0.015"/>
+  <testcase name="[2] 1000" classname="edu.touro.mco152.bm.UtilTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -22,14 +22,14 @@ class TestDiskRun {
     }
 
     /**
-     * Checking a boundary case in DirkRun to see what happens when deleteAll is used on an empty database.
+     * Checking a boundary case in DiskRun to see what happens when deleteAll is used on an empty database.
      */
     @Test
     public void testDeleteAllWithEmptyDatabase() {
         DiskRun.deleteAll();
     }
     /**
-     * Checking a boundary case in DirkRun to see what happens when findAll is used on an empty database.
+     * Checking a boundary case in DiskRun to see what happens when findAll is used on an empty database.
      */
     @Test
     public void testFindAllWithEmptyDatabase(){
@@ -38,14 +38,12 @@ class TestDiskRun {
         Assertions.assertEquals(0, diskRuns.size());
     }
 
-    /**
-     * error will expect only 4 rows of database even though there are 5
-     */
+
     @Test
     void findAll(){
         populateDatabase(5);
         diskRuns = DiskRun.findAll();
-        assertEquals(4, diskRuns.size());
+        assertEquals(5, diskRuns.size());
     }
 
 
@@ -94,7 +92,7 @@ class TestDiskRun {
             run.setTxSize(App.targetTxSizeKb());
             run.setDiskInfo("os: Windows 11");
         /*
-              Persist info about the Write BM Run (e.g. into Derby Database) and add it to a GUI panel
+              Persist info about the Write BM Run (e.g. into Derby Database)
              */
             EntityManager em = EM.getEntityManager();
             em.getTransaction().begin();

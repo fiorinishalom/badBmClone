@@ -40,6 +40,11 @@ public class Util {
         }
         return (path.delete());
     }
+    /**
+     * Broke the method because I took away the +1 after subtracting max from max so that:
+     * 1) the code is not inclusive anymore.
+     * 2) nextInt would now throw Illegal argument exception because 0 is not a positive number.
+     */
 
     /**
      * Returns a pseudo-random number between min and max, inclusive.
@@ -59,7 +64,7 @@ public class Util {
         // nextInt is normally exclusive of the top value,
         // so add 1 to make it inclusive
 
-        return rand.nextInt((max - min) + 1) + min;
+        return rand.nextInt((max - min)) + min;
     }
 
 

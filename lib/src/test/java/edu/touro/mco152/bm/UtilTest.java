@@ -16,11 +16,11 @@ class UtilTest {
     List<Integer> numList = new ArrayList<>(1);
 
     /**
-     * normal test for all integer values excluding 0
+     * normal test for random integer values
      * @param max
      */
     @ParameterizedTest
-    @ValueSource(ints = {1, Integer.MAX_VALUE})
+    @ValueSource(ints = {2, 1000})
     void randInt(int max) {
         int randNum = Util.randInt(1, max);
         numList.add(randNum);

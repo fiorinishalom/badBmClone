@@ -36,6 +36,7 @@ public class EM {
                 EntityManagerFactory emf = Persistence.createEntityManagerFactory("jDiskMarkPU");
                 em = emf.createEntityManager();
             } catch (PersistenceException jpe)
+
             {
                 System.err.println("EM: FATAL Error initializing persistence: " + jpe.getMessage());
                 if (jpe.getCause() instanceof DatabaseException)
@@ -54,4 +55,8 @@ public class EM {
         }
         return em;
     }
+
+
+
 }
+
