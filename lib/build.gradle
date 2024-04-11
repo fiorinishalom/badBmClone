@@ -35,6 +35,14 @@ dependencies {
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation libs.guava
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+}
+
+test {
+    useJUnitPlatform()
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -44,7 +52,7 @@ java {
     }
 }
 
-tasks.named('test') {
+    tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
