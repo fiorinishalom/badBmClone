@@ -64,7 +64,7 @@ public class Util {
         // nextInt is normally exclusive of the top value,
         // so add 1 to make it inclusive
 
-        return rand.nextInt((max - min)) + min;
+        return rand.nextInt((max - min) + 1) + min;
     }
 
 
