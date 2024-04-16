@@ -1,5 +1,6 @@
 package edu.touro.mco152.bm;
 
+import edu.touro.mco152.bm.Command.Invoker;
 import edu.touro.mco152.bm.Command.ReadBenchmark;
 import edu.touro.mco152.bm.Command.WriteBenchmark;
 import edu.touro.mco152.bm.persist.DiskRun;
@@ -41,6 +42,7 @@ import static edu.touro.mco152.bm.DiskMark.MarkType.WRITE;
 public class DiskWorker {
 
     UIWorker uiWorker;
+    Invoker invoker = new Invoker();
 
     public void setUiWorker(UIWorker uiWorker) {
         this.uiWorker = uiWorker;
@@ -77,7 +79,8 @@ public class DiskWorker {
         if (App.writeTest) {
             WriteBenchmark writeBenchmark = new WriteBenchmark(DiskRun.IOMode.WRITE, blockSequence, uiWorker,
                     numOfMarks, numOfBlocks, (blockSizeKb*KILOBYTE));
-            writeBenchmark.write();
+            invoker.setCommand(writeBenchmark).invoke();
+
 
         }  //TODO
         // try renaming all files to clear catch
@@ -96,7 +99,8 @@ public class DiskWorker {
         if (App.readTest) {
             ReadBenchmark readBenchmark = new ReadBenchmark(DiskRun.IOMode.READ, blockSequence, uiWorker,
                     numOfMarks, numOfBlocks, (blockSizeKb*KILOBYTE));
-            if(!readBenchmark.read()){
+            invoker.setCommand(readBenchmark).invoke();
+            if(!readBenchmark.getboolean()){
                 return false;
             }
 

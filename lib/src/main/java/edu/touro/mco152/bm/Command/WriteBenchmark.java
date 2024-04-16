@@ -20,14 +20,15 @@ import static edu.touro.mco152.bm.App.*;
 import static edu.touro.mco152.bm.App.msg;
 import static edu.touro.mco152.bm.DiskMark.MarkType.WRITE;
 
-public class WriteBenchmark extends AbstractBenchmark {
+public class WriteBenchmark extends AbstractBenchmark implements Command {
 
 
     public WriteBenchmark(DiskRun.IOMode mode, DiskRun.BlockSequence blockSequence, UIWorker uiWorker, int numOfMarks, int numOfBlocks, int blockSize) {
         super(mode, blockSequence, uiWorker, numOfMarks, numOfBlocks, blockSize);
     }
 
-    public void write(){
+    @Override
+    public void run(){
        super.run();
         // Create a test data file using the default file system and config-specified location
         if (!App.multiFile) {

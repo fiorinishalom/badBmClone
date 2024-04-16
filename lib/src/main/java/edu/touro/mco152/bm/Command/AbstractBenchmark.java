@@ -12,7 +12,7 @@ import static edu.touro.mco152.bm.App.dataDir;
 import static edu.touro.mco152.bm.App.msg;
 
 
-public class AbstractBenchmark implements Runnable {
+public class AbstractBenchmark implements Runnable{
 
     protected int wUnitsComplete, rUnitsComplete, unitsComplete, unitsTotal;
     protected float percentComplete;
@@ -42,7 +42,7 @@ public class AbstractBenchmark implements Runnable {
         int wUnitsComplete = 0, rUnitsComplete = 0, unitsComplete;
         int wUnitsTotal = (mode == DiskRun.IOMode.WRITE) ? numOfBlocks * numOfMarks : 0;
         int rUnitsTotal = (mode == DiskRun.IOMode.READ) ? numOfBlocks * numOfMarks : 0;
-        int unitsTotal = wUnitsTotal + rUnitsTotal;
+        unitsTotal = wUnitsTotal + rUnitsTotal;
         float percentComplete;
 
         //    int blockSize = blockSizeKb * KILOBYTE; TODO put into to constructer for blockSize
@@ -58,7 +58,7 @@ public class AbstractBenchmark implements Runnable {
     }
 
 
-    @Override
+
     public void run() {
         run.setNumMarks(App.numOfMarks);
         run.setNumBlocks(App.numOfBlocks);

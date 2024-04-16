@@ -20,11 +20,19 @@ import java.util.logging.Logger;
 import static edu.touro.mco152.bm.App.*;
 import static edu.touro.mco152.bm.DiskMark.MarkType.READ;
 
-public class ReadBenchmark extends AbstractBenchmark {
+
+public class ReadBenchmark extends AbstractBenchmark implements Command
+{
+    boolean bool = true;
     public ReadBenchmark(DiskRun.IOMode mode, DiskRun.BlockSequence blockSequence, UIWorker uiWorker, int numOfMarks, int numOfBlocks, int blockSize) {
         super(mode, blockSequence, uiWorker, numOfMarks, numOfBlocks, blockSize);
     }
-    public boolean read(){
+
+    public boolean getboolean(){
+        return bool;
+    }
+    @Override
+    public void run(){
         super.run();
         for (int m = startFileNum; m < startFileNum + App.numOfMarks && !uiWorker.checkCancel(); m++) {
 
@@ -60,7 +68,7 @@ public class ReadBenchmark extends AbstractBenchmark {
                         ex.getMessage();
                 JOptionPane.showMessageDialog(Gui.mainFrame, emsg, "Unable to READ", JOptionPane.ERROR_MESSAGE);
                 msg(emsg);
-                return false;
+                bool = false;
             }
             long endTime = System.nanoTime();
             long elapsedTimeNs = endTime - startTime;
@@ -87,7 +95,7 @@ public class ReadBenchmark extends AbstractBenchmark {
         em.getTransaction().commit();
 
         Gui.runPanel.addRun(run);
-        return true;
+
     }
 
 }
