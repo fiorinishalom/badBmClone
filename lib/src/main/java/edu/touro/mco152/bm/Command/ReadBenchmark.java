@@ -20,17 +20,40 @@ import java.util.logging.Logger;
 import static edu.touro.mco152.bm.App.*;
 import static edu.touro.mco152.bm.DiskMark.MarkType.READ;
 
-
+/**
+ * A benchmark class for reading operations.
+ * Extends {@link AbstractBenchmark} and implements {@link Command}.
+ */
 public class ReadBenchmark extends AbstractBenchmark implements Command
 {
     boolean bool = true;
+
+    /**
+     * Constructs a new ReadBenchmark object.
+     *
+     * @param mode         the I/O mode for disk operations
+     * @param blockSequence the sequence of blocks for disk operations
+     * @param uiWorker     the UI worker for updating progress and displaying results
+     * @param numOfMarks   the number of marks for the benchmark
+     * @param numOfBlocks  the number of blocks to read per mark
+     * @param blockSize    the size of each block in bytes
+     */
     public ReadBenchmark(DiskRun.IOMode mode, DiskRun.BlockSequence blockSequence, UIWorker uiWorker, int numOfMarks, int numOfBlocks, int blockSize) {
         super(mode, blockSequence, uiWorker, numOfMarks, numOfBlocks, blockSize);
     }
-
+    /**
+     * Gets the boolean flag indicating the success or failure of the benchmark.
+     *
+     * @return {@code true} if the benchmark succeeded, {@code false} otherwise
+     */
     public boolean getboolean(){
         return bool;
     }
+
+    /**
+     * Runs the read benchmark.
+     * Overrides the {@link AbstractBenchmark#run()} method.
+     */
     @Override
     public void run(){
         super.run();

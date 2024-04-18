@@ -19,14 +19,30 @@ import java.util.logging.Logger;
 import static edu.touro.mco152.bm.App.*;
 import static edu.touro.mco152.bm.App.msg;
 import static edu.touro.mco152.bm.DiskMark.MarkType.WRITE;
-
+/**
+ * A benchmark class for write operations.
+ * Extends {@link AbstractBenchmark} and implements {@link Command}.
+ */
 public class WriteBenchmark extends AbstractBenchmark implements Command {
 
-
+    /**
+     * Constructs a new WriteBenchmark object.
+     *
+     * @param mode          the I/O mode for disk operations
+     * @param blockSequence the sequence of blocks for disk operations
+     * @param uiWorker      the UI worker for updating progress and displaying results
+     * @param numOfMarks    the number of marks for the benchmark
+     * @param numOfBlocks   the number of blocks to write per mark
+     * @param blockSize     the size of each block in bytes
+     */
     public WriteBenchmark(DiskRun.IOMode mode, DiskRun.BlockSequence blockSequence, UIWorker uiWorker, int numOfMarks, int numOfBlocks, int blockSize) {
         super(mode, blockSequence, uiWorker, numOfMarks, numOfBlocks, blockSize);
     }
 
+    /**
+     * Runs the write benchmark.
+     * Overrides the {@link AbstractBenchmark#run()} method.
+     */
     @Override
     public void run(){
        super.run();
@@ -69,7 +85,7 @@ public class WriteBenchmark extends AbstractBenchmark implements Command {
                         totalBytesWrittenInMark += blockSize;
                         wUnitsComplete++;
                         unitsComplete = rUnitsComplete + wUnitsComplete;
-                        percentComplete = (float) unitsComplete / (float) unitsTotal * 100f;
+                        percentComplete = (float) unitsComplete / (float) unitsTotal * 10000f;
 
                             /*
                               Report to GUI what percentage level of Entire BM (#Marks * #Blocks) is done.

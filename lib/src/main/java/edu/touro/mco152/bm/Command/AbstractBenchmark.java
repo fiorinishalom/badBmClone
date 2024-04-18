@@ -11,7 +11,10 @@ import edu.touro.mco152.bm.ui.Gui;
 import static edu.touro.mco152.bm.App.dataDir;
 import static edu.touro.mco152.bm.App.msg;
 
-
+/**
+ * An abstract class representing a benchmark operation.
+ * Implements {@link Runnable}.
+ */
 public class AbstractBenchmark implements Runnable{
 
     protected int wUnitsComplete, rUnitsComplete, unitsComplete, unitsTotal;
@@ -27,6 +30,16 @@ public class AbstractBenchmark implements Runnable{
 
     protected DiskRun run;
 
+    /**
+     * Constructs a new AbstractBenchmark object.
+     *
+     * @param mode          the I/O mode for disk operations
+     * @param blockSequence the sequence of blocks for disk operations
+     * @param uiWorker      the UI worker for updating progress and displaying results
+     * @param numOfMarks    the number of marks for the benchmark
+     * @param numOfBlocks   the number of blocks per mark for the benchmark
+     * @param blockSize     the size of each block in bytes
+     */
     public AbstractBenchmark( DiskRun.IOMode mode, DiskRun.BlockSequence blockSequence, UIWorker uiWorker, int numOfMarks, int numOfBlocks, int blockSize) {
         this.mode = mode;
         this.uiWorker = uiWorker;
@@ -58,7 +71,10 @@ public class AbstractBenchmark implements Runnable{
     }
 
 
-
+    /**
+     * Runs the benchmark operation.
+     * Overrides the {@link Runnable#run()} method.
+     */
     public void run() {
         run.setNumMarks(App.numOfMarks);
         run.setNumBlocks(App.numOfBlocks);
