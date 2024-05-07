@@ -2,13 +2,14 @@ package edu.touro.mco152.bm;
 
 import java.beans.PropertyChangeListener;
 
+import static org.junit.jupiter.api.Assertions.*;
 /**
  *
  * concrete class to run benchMarker not using swing
  */
 public class MyUI implements UIWorker {
 
-    Boolean lastStatus = false;  // so far unknown
+    Boolean lastStatus = true;  // so far unknown
     int progressNum = 0;
     boolean val;
     @Override
@@ -34,11 +35,13 @@ public class MyUI implements UIWorker {
      */
     @Override
     public void updateProgress(int progress) {
-        assert progress < 0 || progress > 100 : "Progress value must be between 0 and 100";
-        if(0 > progress || progress > 100) {
-            throw new IllegalArgumentException("Progress value must be between 0 and 100");
-        }
-            else{ progressNum = progress;}
+        assertTrue(progress > 0 || progress < 100);
+//        if(0 < progress || progress > 100) {
+//            throw new IllegalArgumentException("Progress value must be between 0 and 100");
+       // }
+           // else{
+                progressNum = progress;
+           // }
 
 
     }
@@ -73,7 +76,7 @@ public class MyUI implements UIWorker {
 
     @Override
     public void displayResults(DiskMark results) {
-        throw new UnsupportedOperationException("This method is not yet implemented");
+        System.out.println("hello world!!!!!!!!!!!!!");
     }
 
     @Override
