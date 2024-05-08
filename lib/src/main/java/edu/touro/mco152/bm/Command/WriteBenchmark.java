@@ -85,7 +85,7 @@ public class WriteBenchmark extends AbstractBenchmark implements Command {
                         totalBytesWrittenInMark += blockSize;
                         wUnitsComplete++;
                         unitsComplete = rUnitsComplete + wUnitsComplete;
-                        percentComplete = (float) unitsComplete / (float) unitsTotal * 10000f;
+                        percentComplete = (float) unitsComplete / (float) unitsTotal * 100f;
 
                             /*
                               Report to GUI what percentage level of Entire BM (#Marks * #Blocks) is done.
