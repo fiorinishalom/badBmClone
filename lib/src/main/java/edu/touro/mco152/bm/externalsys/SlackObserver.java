@@ -18,7 +18,7 @@ public class SlackObserver implements Observer {
      */
     @Override
     public void update(DiskRun run) {
-        if (run.getRunMax() > (run.getRunAvg()) * 1.03 && run.getIoMode() == DiskRun.IOMode.READ) {
+        if ( run.getIoMode() == DiskRun.IOMode.READ && run.getRunMax() > (run.getRunAvg()) * 1.03) {
             SlackManager slackManager = new SlackManager("BadBM");
             slackManager.postMsg2OurChannel("Warning!!! Max runtime had exceeded over 3% of average runtime.");
         }
