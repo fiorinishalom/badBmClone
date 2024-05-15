@@ -2,6 +2,7 @@ package edu.touro.mco152.bm.Command;
 
 import edu.touro.mco152.bm.App;
 import edu.touro.mco152.bm.DiskMark;
+import edu.touro.mco152.bm.Observers.Observer;
 import edu.touro.mco152.bm.UIWorker;
 import edu.touro.mco152.bm.Util;
 import edu.touro.mco152.bm.persist.DiskRun;
@@ -13,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.Date;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,20 +26,21 @@ import static edu.touro.mco152.bm.DiskMark.MarkType.WRITE;
  * Extends {@link AbstractBenchmark} and implements {@link Command}.
  */
 public class WriteBenchmark extends AbstractBenchmark implements Command {
-
     /**
      * Constructs a new WriteBenchmark object.
      *
+     * @param observers     the list of observers
      * @param mode          the I/O mode for disk operations
      * @param blockSequence the sequence of blocks for disk operations
      * @param uiWorker      the UI worker for updating progress and displaying results
      * @param numOfMarks    the number of marks for the benchmark
-     * @param numOfBlocks   the number of blocks to write per mark
+     * @param numOfBlocks   the number of blocks per mark for the benchmark
      * @param blockSize     the size of each block in bytes
      */
-    public WriteBenchmark(DiskRun.IOMode mode, DiskRun.BlockSequence blockSequence, UIWorker uiWorker, int numOfMarks, int numOfBlocks, int blockSize) {
-        super(mode, blockSequence, uiWorker, numOfMarks, numOfBlocks, blockSize);
+    public WriteBenchmark(List<Observer> observers, DiskRun.IOMode mode, DiskRun.BlockSequence blockSequence, UIWorker uiWorker, int numOfMarks, int numOfBlocks, int blockSize) {
+        super(observers, mode, blockSequence, uiWorker, numOfMarks, numOfBlocks, blockSize);
     }
+
 
     /**
      * Runs the write benchmark.
@@ -124,15 +127,7 @@ public class WriteBenchmark extends AbstractBenchmark implements Command {
             run.setEndTime(new Date());
         } // END outer loop for specified duration (number of 'marks') for WRITE benchmark
 
-            /*
-              Persist info about the Write BM Run (e.g. into Derby Database) and add it to a GUI panel
-             */
-        EntityManager em = EM.getEntityManager();
-        em.getTransaction().begin();
-        em.persist(run);
-        em.getTransaction().commit();
-
-        Gui.runPanel.addRun(run);
+            super.alert();
     }
 
         /*

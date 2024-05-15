@@ -3,10 +3,16 @@ package edu.touro.mco152.bm.Command;
 
 import edu.touro.mco152.bm.App;
 import edu.touro.mco152.bm.DiskMark;
+import edu.touro.mco152.bm.Observers.Observer;
+import edu.touro.mco152.bm.Observers.Subject;
 import edu.touro.mco152.bm.UIWorker;
 import edu.touro.mco152.bm.Util;
 import edu.touro.mco152.bm.persist.DiskRun;
+import edu.touro.mco152.bm.persist.EM;
 import edu.touro.mco152.bm.ui.Gui;
+import jakarta.persistence.EntityManager;
+
+import java.util.List;
 
 import static edu.touro.mco152.bm.App.dataDir;
 import static edu.touro.mco152.bm.App.msg;
@@ -15,8 +21,10 @@ import static edu.touro.mco152.bm.App.msg;
  * An abstract class representing a benchmark operation.
  * Implements {@link Runnable}.
  */
-public class AbstractBenchmark implements Runnable{
+public class AbstractBenchmark implements Runnable, Subject {
 
+
+    protected List<Observer> observers;
     protected int wUnitsComplete, rUnitsComplete, unitsComplete, unitsTotal;
     protected float percentComplete;
     protected DiskMark wMark, rMark;
@@ -40,7 +48,8 @@ public class AbstractBenchmark implements Runnable{
      * @param numOfBlocks   the number of blocks per mark for the benchmark
      * @param blockSize     the size of each block in bytes
      */
-    public AbstractBenchmark( DiskRun.IOMode mode, DiskRun.BlockSequence blockSequence, UIWorker uiWorker, int numOfMarks, int numOfBlocks, int blockSize) {
+    public AbstractBenchmark(List<Observer> observers, DiskRun.IOMode mode, DiskRun.BlockSequence blockSequence, UIWorker uiWorker, int numOfMarks, int numOfBlocks, int blockSize) {
+        this.observers = observers;
         this.mode = mode;
         this.uiWorker = uiWorker;
         this.numOfMarks = numOfMarks;
@@ -88,5 +97,29 @@ public class AbstractBenchmark implements Runnable{
         Gui.chartPanel.getChart().getTitle().setVisible(true);
         Gui.chartPanel.getChart().getTitle().setText(run.getDiskInfo());
 
+    }
+
+
+
+    @Override
+    public DiskRun getRun() {
+        return run;
+    }
+
+    @Override
+    public void addObserver(Observer obs) {
+        observers.add(obs);
+    }
+
+    @Override
+    public void removeObserver(Observer obs) {
+        observers.remove(obs);
+    }
+
+    @Override
+    public void alert() {
+        for(Observer obs : observers) {
+            obs.update(getRun());
+        }
     }
 }

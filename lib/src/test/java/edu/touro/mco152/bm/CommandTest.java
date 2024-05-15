@@ -3,23 +3,32 @@ package edu.touro.mco152.bm;
 import edu.touro.mco152.bm.Command.Invoker;
 import edu.touro.mco152.bm.Command.ReadBenchmark;
 import edu.touro.mco152.bm.Command.WriteBenchmark;
+import edu.touro.mco152.bm.Observers.Observer;
 import edu.touro.mco152.bm.persist.DiskRun;
 import edu.touro.mco152.bm.ui.Gui;
 import edu.touro.mco152.bm.ui.MainFrame;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import static edu.touro.mco152.bm.App.*;
 import static edu.touro.mco152.bm.persist.DiskRun.BlockSequence.SEQUENTIAL;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CommandTest {
     UIWorker uiWorker;
     Invoker invoker = new Invoker();
+    List<Observer> observers = new ArrayList<>();
+    static TestObserver testObserver;
     @BeforeEach
     void setUp() {
+        testObserver = new TestObserver();
+        observers.add(testObserver);
         setupDefaultAsPerProperties();
         uiWorker = new MyUI();
     }
@@ -29,7 +38,7 @@ public class CommandTest {
      */
     @Test
     void read(){
-        ReadBenchmark readBenchmark = new ReadBenchmark(DiskRun.IOMode.READ, SEQUENTIAL, uiWorker,
+        ReadBenchmark readBenchmark = new ReadBenchmark(observers,DiskRun.IOMode.READ, SEQUENTIAL, uiWorker,
                 25, 128, (2048*KILOBYTE));
         invoker.setCommand(readBenchmark).invoke();
 
@@ -40,10 +49,18 @@ public class CommandTest {
      */
     @Test
     void write(){
-        WriteBenchmark writeBenchmark = new WriteBenchmark(DiskRun.IOMode.READ, SEQUENTIAL, uiWorker,
+        WriteBenchmark writeBenchmark = new WriteBenchmark(observers,DiskRun.IOMode.READ, SEQUENTIAL, uiWorker,
                 25, 128, (2048*KILOBYTE));
         invoker.setCommand(writeBenchmark).invoke();
 
+    }
+    /**
+     * Verifies that the observer has correctly updated its state after all tests have been executed.
+     * This method asserts that the boolean value returned by the test observer is true.
+     */
+    @AfterAll
+    static void checkObserver(){
+        assertTrue(testObserver.getBool());
     }
 
 

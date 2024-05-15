@@ -3,6 +3,9 @@ package edu.touro.mco152.bm;
 import edu.touro.mco152.bm.Command.Invoker;
 import edu.touro.mco152.bm.Command.ReadBenchmark;
 import edu.touro.mco152.bm.Command.WriteBenchmark;
+import edu.touro.mco152.bm.Observers.Observer;
+import edu.touro.mco152.bm.externalsys.SlackObserver;
+import edu.touro.mco152.bm.persist.DBObserver;
 import edu.touro.mco152.bm.persist.DiskRun;
 import edu.touro.mco152.bm.persist.EM;
 import edu.touro.mco152.bm.ui.Gui;
@@ -14,6 +17,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
@@ -40,9 +44,10 @@ import static edu.touro.mco152.bm.DiskMark.MarkType.WRITE;
  */
 
 public class DiskWorker {
-
+    List<Observer> observers = new ArrayList<>();
     UIWorker uiWorker;
     Invoker invoker = new Invoker();
+    private List<Observer> observer;
 
     public void setUiWorker(UIWorker uiWorker) {
         this.uiWorker = uiWorker;
@@ -71,13 +76,13 @@ public class DiskWorker {
             Gui.resetTestData();
         }
 
-
+        initializeObservers();
         //TODO
         /*
           The GUI allows a Write, Read, or both types of BMs to be started. They are done serially.
          */
         if (App.writeTest) {
-            WriteBenchmark writeBenchmark = new WriteBenchmark(DiskRun.IOMode.WRITE, blockSequence, uiWorker,
+            WriteBenchmark writeBenchmark = new WriteBenchmark(observers, DiskRun.IOMode.WRITE, blockSequence, uiWorker,
                     numOfMarks, numOfBlocks, (blockSizeKb*KILOBYTE));
             invoker.setCommand(writeBenchmark).invoke();
 
@@ -97,7 +102,7 @@ public class DiskWorker {
 
         // Same as above, just for Read operations instead of Writes.
         if (App.readTest) {
-            ReadBenchmark readBenchmark = new ReadBenchmark(DiskRun.IOMode.READ, blockSequence, uiWorker,
+            ReadBenchmark readBenchmark = new ReadBenchmark(observers, DiskRun.IOMode.READ, blockSequence, uiWorker,
                     numOfMarks, numOfBlocks, (blockSizeKb*KILOBYTE));
             invoker.setCommand(readBenchmark).invoke();
             if(!readBenchmark.getboolean()){
@@ -127,5 +132,13 @@ public class DiskWorker {
         });
     }
 
-
+    /**
+     * Initializes the observers for the benchmarking system.
+     * This method adds instances of GUI, DBObserver, and SlackObserver classes to the list of observers.
+     */
+    private void initializeObservers() {
+        observers.add(new Gui());
+        observers.add(new DBObserver());
+        observers.add(new SlackObserver());
+    }
 }
